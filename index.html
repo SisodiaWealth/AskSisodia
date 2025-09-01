@@ -10,11 +10,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.css?v=1.1">
 </head>
 <body>
     <div class="container">
+        <!-- HERO CARD -->
         <header class="card hero">
+            <!-- Translation Widget Container -->
+            <div id="google_translate_element" class="translate-container"></div>
+
             <img src="http://mobiapi.dataupload.in/profile_pic/105096.jpg" alt="Vijaysinh D Sisodia" class="profile-pic">
             <h1>Vijaysinh D Sisodia</h1>
             <p class="title">Insurance Advisor & Wealth Management Consultant</p>
@@ -52,6 +56,14 @@
     <div id="enquiryModal" class="modal"><div class="modal-content"><span class="close-btn" id="enquiryCloseBtn">&times;</span><h2>Enquire Now</h2><form id="enquiryForm"><div class="form-group"><label for="name">Full Name</label><input type="text" id="name" required></div><div class="form-group"><label for="email">Email Address</label><input type="email" id="email" required></div><div class="form-group"><label for="phone">Phone Number</label><input type="tel" id="phone" required></div><div class="form-group"><label for="query">Your Query</label><textarea id="query" required></textarea></div><button type="submit" class="submit-btn">Send via WhatsApp</button></form></div></div>
     <div id="lightbox" class="modal"><div class="modal-content"><span class="close-btn" id="lightboxCloseBtn">&times;</span><img id="lightbox-img" src="" alt="Enlarged gallery image"></div></div>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=1.1"></script>
+    
+    <!-- Google Translate Scripts -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'gu', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
