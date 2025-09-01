@@ -29,6 +29,9 @@ document.addEventListener("DOMContentLoaded", function () {
       src: "http://dataupload.in/digitelcard/Files/637029430819056762WhatsApp%20Image%202019-09-01%20at%2012.19.26%20PM.jpeg",
       alt: "Financial Security Advice",
     },
+    {
+      src: "https://imgur.com/a/3lIijeU",
+    },
   ];
   // =================================
 
@@ -110,4 +113,5 @@ document.addEventListener("DOMContentLoaded", function () {
     enquiryForm.reset();
   });
 });
+
 
