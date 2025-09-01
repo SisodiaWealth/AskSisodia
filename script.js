@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // "Save Me" Button
   document.getElementById("saveContactBtn").addEventListener("click", () => {
-    const vcfData = `BEGIN:VCARD\nVERSION:3.0\nFN:Vijaysinh D Sisodia\nORG:Insurance Advisor\nTEL;TYPE=CELL;TYPE=PREF:9408703170\nEMAIL:sisodia.vijay@yahoo.com\nEND:VCARD`;
+    const vcfData = `BEGIN:VCARD\nVERSION:3.0\nFN:Vijaysinh D Sisodia\nORG:Insurance Advisor\nTEL;TYPE=CELL;TYPE=PREF:+919408703170\nEMAIL:sisodia.vijay@yahoo.com\nEND:VCARD`;
     const blob = new Blob([vcfData], {
       type: "text/vcard;charset=utf-8",
     });
@@ -110,3 +110,4 @@ document.addEventListener("DOMContentLoaded", function () {
     enquiryForm.reset();
   });
 });
+
