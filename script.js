@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { src: "http://mobiapi.dataupload.in/profile_pic/637546236449765116.jpg", alt: "LIC Pension Plan Information" },
         { src: "http://dataupload.in/digitelcard/Files/637029430988275139WhatsApp%20Image%202019-09-01%20at%2012.19.27%20PM.jpeg", alt: "Investment Infographic" },
         { src: "http://dataupload.in/digitelcard/Files/637029430819056762WhatsApp%20Image%202019-09-01%20at%2012.19.26%20PM.jpeg", alt: "Financial Security Advice" },
-        { src: "https://res.cloudinary.com/djarg005s/image/upload/v1756741457/WhatsApp_Image_2025-09-01_at_11.18.26_4ef48f9c_t2hwuu.jpg", alt:"Finance"},
+        { src: "https://i.imgur.com/3lIijeU.jpeg", alt: "Your custom image"}
     ];
     // =================================
 
@@ -66,7 +66,50 @@ document.addEventListener('DOMContentLoaded', function() {
         closeEnquiryModal();
         enquiryForm.reset();
     });
+
+    // === Translate Feature ===
+    const translateContainer = document.getElementById('custom-translate-container');
+
+    function createTranslateButton() {
+        translateContainer.innerHTML = `
+            <button id="translate-btn" class="custom-translate-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                Translate to Gujarati
+            </button>
+        `;
+        document.getElementById('translate-btn').addEventListener('click', () => triggerTranslate('gu'));
+    }
+
+    function createRevertButton() {
+        translateContainer.innerHTML = `
+            <button id="revert-btn" class="custom-translate-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                Show Original
+            </button>
+        `;
+        document.getElementById('revert-btn').addEventListener('click', () => triggerTranslate('en'));
+    }
+
+    function triggerTranslate(lang) {
+        const googleCombo = document.querySelector('#google_translate_element .goog-te-combo');
+        if (googleCombo) {
+            googleCombo.value = lang;
+            googleCombo.dispatchEvent(new Event('change'));
+        }
+    }
+    
+    // Check which language is active and show the correct button
+    setInterval(() => {
+        const isTranslated = document.querySelector('html').classList.contains('translated-ltr');
+        const hasRevertButton = document.getElementById('revert-btn');
+        
+        if (isTranslated && !hasRevertButton) {
+            createRevertButton();
+        } else if (!isTranslated && !document.getElementById('translate-btn')) {
+            createTranslateButton();
+        }
+    }, 500); // Check every half second
+
+    // Initialize the first button
+    createTranslateButton();
 });
-
-
-
