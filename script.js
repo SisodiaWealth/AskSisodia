@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
         { src: "http://mobiapi.dataupload.in/profile_pic/637546236622084553.jpg", alt: "Secure your family's future" },
         { src: "http://mobiapi.dataupload.in/profile_pic/637546236449765116.jpg", alt: "LIC Pension Plan Information" },
         { src: "http://dataupload.in/digitelcard/Files/637029430988275139WhatsApp%20Image%202019-09-01%20at%2012.19.27%20PM.jpeg", alt: "Investment Infographic" },
-        { src: "http://dataupload.in/digitelcard/Files/637029430819056762WhatsApp%20Image%202019-09-01%20at%2012.19.26%20PM.jpeg", alt: "Financial Security Advice" }
+        { src: "http://dataupload.in/digitelcard/Files/637029430819056762WhatsApp%20Image%202019-09-01%20at%2012.19.26%20PM.jpeg", alt: "Financial Security Advice" },
+        { src: "https://imgur.com/a/3lIijeU"},
     ];
     // =================================
 
@@ -66,3 +67,4 @@ document.addEventListener('DOMContentLoaded', function() {
         enquiryForm.reset();
     });
 });
+
